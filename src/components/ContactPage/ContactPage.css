@@ -90,6 +90,7 @@ button[type="submit"] {
 
 .contact-page-spline-container canvas {
   border-radius: 165px 0 0 165px;
+  max-height: 667px;
 }
 
 @media only screen and (max-width: 950px) {
