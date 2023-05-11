@@ -1,0 +1,103 @@
+.about-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 133px;
+  font-size: 20px;
+}
+
+.about-page-info-container {
+  width: 80%;
+  display: flex;
+  background-color: #fff;
+  color: #130a25;
+  justify-content: center;
+  gap: 79px;
+  align-items: center;
+}
+
+.about-page-heading {
+  font-size: 45px;
+  font-family: "Unbounded", cursive;
+}
+
+.about-page-text {
+  font-size: 20px;
+  margin-top: 23px;
+}
+
+.about-page-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50%;
+  text-align: left;
+}
+
+.skills-title {
+  font-family: "Unbounded", cursive;
+}
+
+.about-page-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  justify-content: space-between;
+}
+
+.skills-title {
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+.about-page-projects {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 81px;
+}
+
+.project-title {
+  font-family: "Unbounded", cursive;
+  color: #6426eb;
+  font-size: 194px;
+  stroke: #6426eb;
+  transform: translateX(-15px);
+  transition: all 0.6s ease-in-out;
+  text-align: center;
+}
+
+.project-title {
+  margin-bottom: 23px;
+}
+
+.project-title:hover {
+  filter: none;
+  transform: translateX(30px);
+}
+
+.project-title:hover::before {
+  content: ">";
+  position: absolute;
+  font-size: 194px;
+  font-family: "Unbounded", cursive;
+  color: #6426eb;
+  stroke: #6426eb;
+  left: -70px;
+  transform: translateX(-70px);
+  transition: all 0.6s ease-in-out;
+}
+
+@media only screen and (max-width: 1440px) {
+  .project-title {
+    font-size: 120px;
+  }
+  .project-title:hover::before {
+    font-size: 120px;
+    left: -40px;
+    transform: translateX(-40px);
+  }
+}

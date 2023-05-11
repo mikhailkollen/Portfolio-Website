@@ -1,0 +1,98 @@
+.home-page {
+  box-sizing: border-box;
+  background-color: #6426eb;
+  width: 100%;
+  height: fit-content;
+  padding: 50px 10% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-links {
+  width: fit-content;
+  gap: 79px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.heading-name {
+  font-size: 194px;
+  color: #ffffff;
+  font-family: "Unbounded", cursive;
+  align-self: flex-start;
+  transform: translateX(-15px);
+  margin-top: 142px;
+  margin-bottom: 66px;
+}
+
+.home-page-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 26px;
+}
+
+.info-boxex-container {
+  display: flex;
+  gap: 26px;
+  min-width: fit-content;
+}
+
+.info-box {
+  border: 1px solid #ffffff;
+  border-radius: 34px;
+  display: flex;
+  max-width: fit-content;
+  padding: 19px 22px;
+  font-size: 20px;
+  align-items: center;
+  color: #ffffff;
+}
+
+.info-box-title {
+  padding-left: 24px;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.spline-container {
+  margin-top: 83px;
+  width: 100%;
+  border-radius: 165px;
+}
+
+.spline-container canvas {
+  border-radius: 165px 165px 0 0;
+  width: 100%;
+  min-height: 646px;
+  max-height: 646px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .nav-link {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .heading-name {
+    font-size: 120px;
+  }
+}

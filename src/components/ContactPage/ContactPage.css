@@ -1,0 +1,86 @@
+.contact-page {
+  background-color: #130a25;
+  width: 100%;
+  display: flex;
+  padding: 71px 0 71px 190px;
+  font-size: 20px;
+  gap: 160px;
+  justify-content: space-between;
+}
+
+.contact-page-heading {
+  color: #fff;
+  font-family: "Unbounded", cursive;
+  font-size: 45px;
+}
+
+.contact-page-details {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.contact-page-details p {
+  color: #fff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-page-email-title {
+  color: #bdb9c4;
+}
+
+.email-address {
+  color: #fff;
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  gap: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 11px 22px;
+  background-color: #575064;
+  color: #bdb9c4;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: #bdb9c4;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+button[type="submit"] {
+  background-color: #fff;
+  color: #130a25;
+  padding: 10px 26px;
+  border-radius: 25px;
+  width: fit-content;
+}
+
+.contact-page-spline-container {
+  width: 40%;
+}
+
+.contact-page-spline-container canvas {
+  border-radius: 165px 0 0 165px;
+}
+
+@media only screen and (max-width: 850px) {
+  .contact-page-spline-container {
+    display: none;
+  }
+}
