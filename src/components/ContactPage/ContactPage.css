@@ -75,6 +75,15 @@ button[type="submit"] {
   width: 40%;
 }
 
+.socials-link {
+  transition: all 0.3s ease-in-out;
+}
+
+.socials-link:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #fff;
+}
+
 .contact-page-spline-container canvas {
   border-radius: 165px 0 0 165px;
 }

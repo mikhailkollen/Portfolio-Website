@@ -23,9 +23,29 @@
   justify-content: space-between;
 }
 
-.header-links a {
+.nav-link {
   color: #ffffff;
   text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ffffff00;
+  transition: border-bottom 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.6s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  transition: width 0.6s ease-in-out;
 }
 
 .heading-name {
