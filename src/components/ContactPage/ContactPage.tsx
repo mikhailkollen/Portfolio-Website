@@ -23,7 +23,7 @@ const ContactPage = () => {
   }
 
   return (
-    <footer className='contact-page'>
+    <footer className='contact-page' id='contacts'>
       <div className="contact-page-details">
         <h5 className='contact-page-heading'>
           CONTACT ME

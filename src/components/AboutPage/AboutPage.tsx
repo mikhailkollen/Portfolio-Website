@@ -6,7 +6,7 @@ import SixtyPercentBar from '../../assets/SixtyPercentBar'
 
 const AboutPage = () => {
   return (
-    <section className='about-page'>
+    <section className='about-page' id="about-me">
       <div className="about-page-info-container">
         <div className="about-page-info">
           <h2 className='about-page-heading'>
@@ -45,7 +45,7 @@ const AboutPage = () => {
           </span>
         </div>
       </div>
-      <div className="about-page-projects">
+      <div className="about-page-projects" id='projects'>
         <a href='https://github.com/mikhailkollen/react-ecommerce-project' target='_blank' className="project-title">E-STORE</a>
         <a href='https://github.com/mikhailkollen/react-to-do-app' target='_blank' className="project-title">TO-DO APP</a>
         <a href='https://github.com/mikhailkollen/react-ip-address-tracker-app' target='_blank' className="project-title">IP-TRACKER</a>
