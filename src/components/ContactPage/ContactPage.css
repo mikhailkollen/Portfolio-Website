@@ -76,7 +76,11 @@ button[type="submit"] {
 }
 
 .socials-link {
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
+  width: fit-content;
+  width: 35px;
+  height: 35px;
 }
 
 .socials-link:hover {
