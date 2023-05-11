@@ -83,4 +83,9 @@ button[type="submit"] {
   .contact-page-spline-container {
     display: none;
   }
+
+  .contact-page {
+    padding: 35px 50px;
+    gap: 50px;
+  }
 }

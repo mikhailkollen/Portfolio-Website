@@ -64,6 +64,7 @@
 
 .info-box-title {
   padding-left: 24px;
+  text-align: left;
 }
 
 .horizontal-line {
@@ -94,5 +95,29 @@
 @media only screen and (max-width: 1440px) {
   .heading-name {
     font-size: 120px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .heading-name {
+    font-size: 60px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .spline-container canvas {
+    border-radius: 80px 80px 0 0;
+    width: 100%;
+    min-height: 320px;
+    max-height: 320px;
+  }
+
+  .info-box-title {
+    padding-left: 12px;
+  }
+
+  .info-box {
+    padding: 12px 12px;
+    font-size: 16px;
   }
 }

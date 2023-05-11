@@ -127,4 +127,25 @@
   .about-page-info {
     max-width: 80%;
   }
+  .project-title {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about-page {
+    padding-top: 70px;
+  }
+
+  .about-page-info {
+    max-width: 100%;
+  }
+
+  .about-page-skills {
+    align-items: center;
+  }
+
+  .about-page-skills svg {
+    max-width: 100%;
+  }
 }
