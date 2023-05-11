@@ -1,7 +1,5 @@
-import React from 'react'
 import Logo from '../../assets/Logo'
 import './HomePage.css'
-import {NavLink} from 'react-router-dom'
 import WhiteCircleIcon from '../../assets/WhiteCircleIcon'
 import Spline from '@splinetool/react-spline';
 
