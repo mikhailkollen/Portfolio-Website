@@ -70,3 +70,21 @@
   font-size: 48px;
   background: rgba(255, 255, 255, 0.05);
 }
+
+@media only screen and (max-width: 900px) {
+  .contentBlock {
+    height: 80px;
+    font-size: 30px;
+    gap: 2rem;
+  }
+  .contentBlock p {
+    min-width: fit-content;
+  }
+  .contentBlock--one {
+    width: 80px;
+    font-size: 14px;
+  }
+  .contentBlock--two {
+    font-size: 30px;
+  }
+}

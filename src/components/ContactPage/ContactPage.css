@@ -69,6 +69,8 @@ button[type="submit"] {
   padding: 10px 26px;
   border-radius: 25px;
   width: fit-content;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact-page-spline-container {
@@ -83,7 +85,8 @@ button[type="submit"] {
   height: 35px;
 }
 
-.socials-link:hover {
+.socials-link:hover,
+.contact-page-submit:hover {
   transform: scale(1.2);
   box-shadow: 0 0 10px #fff;
 }
@@ -101,5 +104,9 @@ button[type="submit"] {
   .contact-page {
     padding: 35px 50px;
     gap: 50px;
+  }
+
+  .contact-page-heading {
+    font-size: 30px;
   }
 }

@@ -2,17 +2,57 @@ import Logo from '../../assets/Logo'
 import './HomePage.css'
 import WhiteCircleIcon from '../../assets/WhiteCircleIcon'
 import Spline from '@splinetool/react-spline';
-
+import { useEffect, useState } from 'react';
+import Hamburger from 'hamburger-react'
 
 const HomePage = () => {
+  const [isMobile, setIsMobile] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [navLinkColor, setNavLinkColor] = useState('')
+
+  useEffect(() => {
+    if (window.innerWidth < 700) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }, [])
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 700) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  })
+
+  
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setNavLinkColor('#130a25')
+    } else {
+      setNavLinkColor('')
+    }
+  }
+
+
+
+
   return (
     <section className='home-page'>
      <header className='home-page-header'>
        <Logo/>
-       <div className='header-links'>
-         <a className="nav-link" href="#about-me">About me</a>
-          <a className="nav-link" href="#projects">Projects</a>
-          <a className="nav-link" href="#contacts">Contacts</a>
+        {isMobile && <Hamburger color='#fff' toggled={isMenuOpen} toggle={setIsMenuOpen}/>}
+       <div className={`header-links${isMobile ? "-mobile" : ""}`} style={{transform:  (isMobile) ? isMenuOpen ? "translateX(0)" : "translateX(100%)" : undefined}}>
+         <a className="nav-link" href="#about-me" style={{color: navLinkColor}}>About me</a>
+          <a className="nav-link" href="#projects" style={{color: navLinkColor}}>Projects</a>
+          <a className="nav-link" href="#contacts" style={{color: navLinkColor}}>Contacts</a>
        </div>
      </header>
      <h1 className='heading-name'>MIKHAIL <br/> KOLLEN</h1>

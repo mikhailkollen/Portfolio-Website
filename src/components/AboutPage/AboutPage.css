@@ -137,7 +137,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .about-page {
     padding-top: 70px;
   }
@@ -152,5 +152,9 @@
 
   .about-page-skills svg {
     max-width: 100%;
+  }
+
+  .about-page-projects {
+    margin-top: 50px;
   }
 }
