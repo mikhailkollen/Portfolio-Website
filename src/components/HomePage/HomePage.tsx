@@ -48,7 +48,8 @@ const HomePage = () => {
 
   return (
     <section className='home-page'> 
-      {isMenuOpen && <div className="overlay" onClick={()=>setIsMenuOpen(false)}></div>}
+    {/* REMOVE OVERLAY UNTIL FIND A BETTER SOLUTION AS ON MOBILE THE SIDEBAR IS CLOSED WHEN SCROLLING */}
+      {/* {isMenuOpen && <div className="overlay" onClick={()=>setIsMenuOpen(false)}></div>} */}
       <header className='home-page-header'>
         <Logo />
         {isMobile && <Hamburger color='#fff' toggled={isMenuOpen} toggle={setIsMenuOpen} />}
