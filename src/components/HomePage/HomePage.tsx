@@ -15,6 +15,7 @@ const HomePage = () => {
       setIsMobile(true)
     } else {
       setIsMobile(false)
+      
     }
   }, [])
 
@@ -24,9 +25,10 @@ const HomePage = () => {
     } else {
       setIsMobile(false)
     }
+    setIsMenuOpen(false)
   })
 
-  
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -34,7 +36,7 @@ const HomePage = () => {
   }, [])
 
   const handleScroll = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 300 && window.innerWidth < 700) {
       setNavLinkColor('#130a25')
     } else {
       setNavLinkColor('')
@@ -45,33 +47,34 @@ const HomePage = () => {
 
 
   return (
-    <section className='home-page'>
-     <header className='home-page-header'>
-       <Logo/>
-        {isMobile && <Hamburger color='#fff' toggled={isMenuOpen} toggle={setIsMenuOpen}/>}
-       <div className={`header-links${isMobile ? "-mobile" : ""}`} style={{transform:  (isMobile) ? isMenuOpen ? "translateX(0)" : "translateX(100%)" : undefined}}>
-         <a className="nav-link" href="#about-me" title='About' style={{color: navLinkColor}}>About me</a>
-          <a className="nav-link" href="#projects" title='Projects' style={{color: navLinkColor}}>Projects</a>
-          <a className="nav-link" href="#contacts" title='Contacts' style={{color: navLinkColor}}>Contacts</a>
-       </div>
-     </header>
-     <h1 className='heading-name'>MIKHAIL <br/> KOLLEN</h1>
-     <div className='home-page-info'>
-       <div className="info-boxex-container">
-        <div className="info-box">
-          <WhiteCircleIcon/>
-          <p className='info-box-title'>Frontend Developer</p>
+    <section className='home-page'> 
+      {isMenuOpen && <div className="overlay" onClick={()=>setIsMenuOpen(false)}></div>}
+      <header className='home-page-header'>
+        <Logo />
+        {isMobile && <Hamburger color='#fff' toggled={isMenuOpen} toggle={setIsMenuOpen} />}
+        <div className={`header-links${isMobile ? "-mobile" : ""}`} style={{ transform: (isMobile) ? isMenuOpen ? "translateX(0)" : "translateX(100%)" : undefined}}>
+          <a className="nav-link" href="#about-me" title='About' style={{ color: navLinkColor }}>About me</a>
+          <a className="nav-link" href="#projects" title='Projects' style={{ color: navLinkColor }}>Projects</a>
+          <a className="nav-link" href="#contacts" title='Contacts' style={{ color: navLinkColor }}>Contacts</a>
         </div>
-        <div className="info-box">
-          <WhiteCircleIcon/>
-          <p className='info-box-title'>Tbilisi, Georgia</p>
+      </header>
+      <h1 className='heading-name'>MIKHAIL <br /> KOLLEN</h1>
+      <div className='home-page-info'>
+        <div className="info-boxex-container">
+          <div className="info-box">
+            <WhiteCircleIcon />
+            <p className='info-box-title'>Frontend Developer</p>
+          </div>
+          <div className="info-box">
+            <WhiteCircleIcon />
+            <p className='info-box-title'>Tbilisi, Georgia</p>
+          </div>
         </div>
-       </div>
-       <span className='horizontal-line'></span>
-     </div>
-       <Spline className="spline-container" scene="https://prod.spline.design/mrm3q2O4nROI3clV/scene.splinecode" />
-       
-     
+        <span className='horizontal-line'></span>
+      </div>
+      <Spline className="spline-container" scene="https://prod.spline.design/mrm3q2O4nROI3clV/scene.splinecode" />
+
+
     </section>
   )
 }

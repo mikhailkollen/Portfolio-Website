@@ -9,6 +9,13 @@
   align-items: center;
 }
 
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
 .home-page-header {
   position: fixed;
   display: flex;
@@ -151,7 +158,7 @@
 @media only screen and (max-width: 900px) {
   .heading-name {
     font-size: 60px;
-    margin-top: 70px;
+    margin-top: calc(70px + 10%);
     margin-bottom: 50px;
   }
 
