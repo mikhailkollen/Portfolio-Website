@@ -50,9 +50,9 @@ const HomePage = () => {
        <Logo/>
         {isMobile && <Hamburger color='#fff' toggled={isMenuOpen} toggle={setIsMenuOpen}/>}
        <div className={`header-links${isMobile ? "-mobile" : ""}`} style={{transform:  (isMobile) ? isMenuOpen ? "translateX(0)" : "translateX(100%)" : undefined}}>
-         <a className="nav-link" href="#about-me" style={{color: navLinkColor}}>About me</a>
-          <a className="nav-link" href="#projects" style={{color: navLinkColor}}>Projects</a>
-          <a className="nav-link" href="#contacts" style={{color: navLinkColor}}>Contacts</a>
+         <a className="nav-link" href="#about-me" title='About' style={{color: navLinkColor}}>About me</a>
+          <a className="nav-link" href="#projects" title='Projects' style={{color: navLinkColor}}>Projects</a>
+          <a className="nav-link" href="#contacts" title='Contacts' style={{color: navLinkColor}}>Contacts</a>
        </div>
      </header>
      <h1 className='heading-name'>MIKHAIL <br/> KOLLEN</h1>
