@@ -17,6 +17,7 @@ const ContactPage = () => {
     emailjs.sendForm('service_u3rx4c4', 'template_69w5b9k', form.current, 'R4Nbqae3k5MLMhuiE')
       .then((result) => {
         console.log(result.text);
+        form.current.reset();
       }, (error) => {
         console.log(error.text);
       });
