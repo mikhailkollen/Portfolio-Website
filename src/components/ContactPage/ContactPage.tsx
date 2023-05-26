@@ -14,7 +14,7 @@ const ContactPage = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    emailjs.sendForm('service_u3rx4c4', 'template_69w5b9k', form.current, 'R4Nbqae3k5MLMhuiE')
+    emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_KEY, import.meta.env.VITE_EMAILJS_TEMPLATE_KEY, form.current, import.meta.env.VITE_EMAILJS_VITE_EMAILJS_TOKEN)
       .then((result) => {
         console.log(result.text);
         form.current.reset();
