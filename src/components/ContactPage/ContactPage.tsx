@@ -16,9 +16,9 @@ const ContactPage = () => {
 
     const serviceKey = import.meta.env.VITE_EMAILJS_SERVICE_KEY;
     const templateKey = import.meta.env.VITE_EMAILJS_TEMPLATE_KEY;
-    const token = import.meta.env.VITE_EMAILJS_VITE_EMAILJS_TOKEN;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    emailjs.sendForm(serviceKey, templateKey, form.current, token).then(
+    emailjs.sendForm(serviceKey, templateKey, form.current, publicKey).then(
       () => {
         form.current.reset();
       },
