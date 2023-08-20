@@ -19,8 +19,7 @@ const ContactPage = () => {
     const token = import.meta.env.VITE_EMAILJS_VITE_EMAILJS_TOKEN;
 
     emailjs.sendForm(serviceKey, templateKey, form.current, token).then(
-      (result) => {
-        console.log(result.text);
+      () => {
         form.current.reset();
       },
       (error) => {
