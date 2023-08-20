@@ -41,14 +41,14 @@
   align-items: center;
   justify-content: center;
   height: 120px;
-  margin: 10px;
-  padding: 16px;
+  margin: 10px 0 10px 2rem;
+  padding: 16px 0;
   font-weight: 600;
   text-align: center;
   border-radius: 16px;
   color: #fff;
   font-size: 45px;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .contentBlock p {
