@@ -30,12 +30,15 @@
 
 .header-links {
   width: fit-content;
-  gap: 79px;
+  gap: 50px;
   display: flex;
   justify-content: space-between;
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #ffffff;
   text-decoration: none;
   padding-bottom: 5px;
@@ -43,6 +46,7 @@
   transition: all 0.3s ease-in-out;
   position: relative;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .nav-link::before {
