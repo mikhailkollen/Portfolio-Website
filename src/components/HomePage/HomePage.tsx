@@ -1,5 +1,5 @@
 import Logo from "../../assets/Logo";
-import "./HomePage.css";
+
 import WhiteCircleIcon from "../../assets/WhiteCircleIcon";
 import Spline from "@splinetool/react-spline";
 import { useEffect, useState } from "react";
@@ -7,11 +7,19 @@ import Hamburger from "hamburger-react";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import DownloadIcon from "../../assets/DownloadIcon";
+import { toast } from "react-toastify";
+import "./HomePage.css";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navLinkColor, setNavLinkColor] = useState("#fff");
+
+  const notifyOnDownload = () => {
+    toast.info("Downloading CV...", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
 
   useEffect(() => {
     if (window.innerWidth < 700) {
@@ -98,6 +106,7 @@ const HomePage = () => {
             target="_blank"
             rel="noreferrer"
             style={{ color: navLinkColor }}
+            onClick={notifyOnDownload}
           >
             CV <DownloadIcon color={navLinkColor} />
           </RouterLink>

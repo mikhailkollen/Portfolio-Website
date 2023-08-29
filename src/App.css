@@ -6,3 +6,9 @@
   align-items: flex-start;
   text-align: center;
 }
+
+:root {
+  --toastify-color-success: #6426eb;
+  --toastify-color-error: #eb2646;
+  --toastify-color-info: #6426eb;
+}

@@ -5,11 +5,28 @@ import WhatsAppIcon from "../../assets/WhatsAppIcon";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import Spline from "@splinetool/react-spline";
+import { toast } from "react-toastify";
 
 import "./ContactPage.css";
 
 const ContactPage = () => {
   const form: any = useRef(null);
+
+  const customId = "custom-id-yes";
+
+  const notifyOnSuccess = () => {
+    toast.success("Message Sent!", {
+      position: toast.POSITION.TOP_RIGHT,
+      toastId: customId,
+    });
+  };
+
+  const notifyOnError = () => {
+    toast.error("Message Failed to Send!", {
+      position: toast.POSITION.TOP_RIGHT,
+      toastId: "error",
+    });
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -20,10 +37,12 @@ const ContactPage = () => {
 
     emailjs.sendForm(serviceKey, templateKey, form.current, publicKey).then(
       () => {
+        notifyOnSuccess();
         form.current.reset();
       },
       (error) => {
-        console.log(error.text);
+        notifyOnError();
+        throw new Error(error.text);
       }
     );
   };
@@ -96,8 +115,7 @@ const ContactPage = () => {
           <button
             type="submit"
             value="Send"
-            className="contact-page-input contact-page-submit
-         "
+            className="contact-page-input contact-page-submit"
           >
             Send
           </button>
