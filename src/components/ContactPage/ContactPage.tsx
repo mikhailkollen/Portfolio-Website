@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import "./ContactPage.css";
 
 const ContactPage = () => {
-  const form: any = useRef(null);
+  const form: React.RefObject<HTMLFormElement> = useRef(null);
 
   const customId = "custom-id-yes";
 
@@ -28,23 +28,27 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const serviceKey = import.meta.env.VITE_EMAILJS_SERVICE_KEY;
     const templateKey = import.meta.env.VITE_EMAILJS_TEMPLATE_KEY;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    emailjs.sendForm(serviceKey, templateKey, form.current, publicKey).then(
-      () => {
-        notifyOnSuccess();
-        form.current.reset();
-      },
-      (error) => {
-        notifyOnError();
-        throw new Error(error.text);
-      }
-    );
+    if (form !== null && form.current !== null) {
+      emailjs.sendForm(serviceKey, templateKey, form.current, publicKey).then(
+        () => {
+          notifyOnSuccess();
+          if (form.current !== null) {
+            form.current.reset();
+          }
+        },
+        (error) => {
+          notifyOnError();
+          throw new Error(error.text);
+        }
+      );
+    }
   };
 
   return (
